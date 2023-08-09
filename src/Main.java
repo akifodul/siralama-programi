@@ -1,17 +1,37 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int a,b,c;
+        Scanner input = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.print("1. sayı: ");
+        a = input.nextInt();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        System.out.print("2. sayı: ");
+        b = input.nextInt();
+
+        System.out.print("3. sayı: ");
+        c = input.nextInt();
+
+        if ((a < b) && (a < c)) {
+            if (b < c) {
+                System.out.print("a < b < c");
+            } else {
+                System.out.print("a < c < b");
+            }
+        } else if ((b < a) && (b < c)) {
+            if (a < c) {
+                System.out.print("b < a < c");
+            } else {
+                System.out.print("b < c < a");
+            }
+        } else if ((c < a) && (c < b)) {
+            if (a < b) {
+                System.out.print("c < a < b");
+            } else {
+                System.out.print("c < b < a");
+
+            }
         }
     }
 }
